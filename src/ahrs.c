@@ -1,5 +1,5 @@
 #include "ahrs.h"
-#include "6dof_math.h"
+#include "ahrs_math.h"
 
 /**
  * @brief Calculate conjugate of quaternion
@@ -56,7 +56,7 @@ void quatern_prod(float32_t a[], float32_t b[], float32_t c[])
  * @param accelerometer Accelerometer data
  * @param ahrs AHRS algorithm structure
  */
-void update_ahrs_imu(float32_t gyroscope[], float32_t accelerometer[], arm_AHRS_f32 *ahrs)
+void update_ahrs(float32_t gyroscope[], float32_t accelerometer[], arm_AHRS_f32 *ahrs)
 {
 	/* Normalise accelerometer measurement */
 	float32_t norm = vector_norm(3, accelerometer);

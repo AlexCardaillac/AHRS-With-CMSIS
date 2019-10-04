@@ -19,6 +19,6 @@ typedef struct
 /*
 ** AHRS functions
 */
-void update_ahrs_imu(float32_t gyroscope[], float32_t accelerometer[], arm_AHRS_f32 *ahrs);
+void update_ahrs(float32_t gyroscope[], float32_t accelerometer[], arm_AHRS_f32 *ahrs);
 
 #endif /* !_AHRS_H */
